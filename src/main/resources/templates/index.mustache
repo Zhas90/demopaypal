@@ -1,0 +1,23 @@
+{{>header}}
+
+<div id="root" class="container">
+    <div class="card w-30">
+        <div class="card-body">
+            <h4 class="card-title">Введите сумму и нажмите кнопку "Оплатить через PayPal"</h4>
+            <h6 class="card-subtitle text-muted">Это инициирует процесс оплаты PayPal</h6>
+            <form action="/orders" method="post">
+                <div class="form-group m-3">
+                    <label for="totalAmount">Сумма в USD</label>
+                    <input type="text"
+                           class="form-control" name="totalAmount" id="totalAmount" aria-describedby="helpId"
+                           placeholder="100">
+                    <small id="helpId" class="form-text text-muted">Пожалуйста, введите сумму, чтобы начать процесс оформления заказа PayPal</small>
+                </div>
+                <button class="btn btn-warning text-bolder text-blue" type="submit">Оплатить через PayPal</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{{>footer}}
